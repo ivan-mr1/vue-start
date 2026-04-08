@@ -11,8 +11,6 @@ import { LangSelect } from '@/features/lang-switcher';
 <style scoped lang="scss">
 .header {
   &__actions {
-    position: relative;
-    z-index: 5;
     display: flex;
     flex-wrap: wrap;
     align-items: center;

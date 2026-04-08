@@ -14,7 +14,7 @@ export const i18n = createI18n({
   messages,
 });
 
-export function useSliceI18n(sliceName, localMessages) {
+export const useSliceI18n = (sliceName, localMessages) => {
   const globalI18n = i18n.global;
 
   Object.keys(localMessages).forEach((locale) => {
@@ -26,4 +26,4 @@ export function useSliceI18n(sliceName, localMessages) {
   return {
     t: (key, ...args) => globalI18n.t(`${sliceName}.${key}`, ...args),
   };
-}
+};
