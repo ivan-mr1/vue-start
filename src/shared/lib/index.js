@@ -7,4 +7,3 @@ export { deviceDetection } from './device-detection/device-detection';
 export { generateId } from './id/generateId';
 export { formatPrice } from './number/formatPrice';
 export { playSound } from './play-sound/playSound';
-export { useSliceI18n } from './i18n/index';

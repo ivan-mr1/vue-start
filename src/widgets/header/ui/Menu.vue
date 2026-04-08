@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue';
-import { useSliceI18n } from '@/shared/lib/i18n';
+import { useSliceI18n } from '@/shared/i18n';
 import { useMovieStore } from '@/entities/movie-card';
 import { HomeIcon, SearchIcon, FavoriteIcon, EyeIcon } from '@/shared/ui/icons';
 import ru from '../locales/ru.json';

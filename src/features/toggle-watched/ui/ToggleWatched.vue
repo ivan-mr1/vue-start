@@ -1,6 +1,6 @@
 <script setup>
 import { useMovieStore } from '@/entities/movie-card';
-import { useSliceI18n } from '@/shared/lib';
+import { useSliceI18n } from '@/shared/i18n';
 import Button from '@/shared/ui/form/button';
 import ru from '../locales/ru.json';
 import ua from '../locales/ua.json';

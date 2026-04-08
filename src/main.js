@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import router from '@/app/routing';
-import { i18n } from '@/shared/lib/i18n';
+import { i18n } from '@/shared/i18n';
 import App from '@/app';
 
 const pinia = createPinia();
