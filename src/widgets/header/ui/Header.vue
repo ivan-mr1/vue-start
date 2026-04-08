@@ -3,6 +3,7 @@ import { useHeaderLogic } from '../model/useHeader';
 import Logo from '@/shared/ui/logo';
 import Menu from './Menu.vue';
 import { Burger1 } from './burger-button';
+import Actions from './actions/Actions.vue';
 
 const props = defineProps({
   isHiddenHeader: {
@@ -44,6 +45,7 @@ const { headerRef, isMenuOpen, isScrolled, isHidden, toggleMenu, closeMenu, onMe
         @click.self="closeMenu"
       >
         <Menu :is-open="isMenuOpen" @click="onMenuLinkClick" />
+        <Actions />
       </div>
 
       <Burger1 :is-active="isMenuOpen" @click="toggleMenu" />
@@ -90,6 +92,12 @@ const { headerRef, isMenuOpen, isScrolled, isHidden, toggleMenu, closeMenu, onMe
     align-items: center;
     @include adaptive-clamp('column-gap', 40, 20);
     @include adaptive-clamp('min-height', 100, 65);
+  }
+
+  &__logo,
+  &__actions {
+    position: relative;
+    z-index: 5;
   }
 
   &__overlay {
