@@ -1,0 +1,29 @@
+import { createI18n } from 'vue-i18n';
+import { browserStorage } from '@/shared/lib';
+
+const messages = {
+  ru: { shared: { ok: 'Ок', cancel: 'Отмена' } },
+  ua: { shared: { ok: 'Ок', cancel: 'Скасувати' } },
+  en: { shared: { ok: 'Ok', cancel: 'Cancel' } },
+};
+
+export const i18n = createI18n({
+  legacy: false,
+  locale: browserStorage.get('lang', 'en'),
+  fallbackLocale: 'en',
+  messages,
+});
+
+export function useSliceI18n(sliceName, localMessages) {
+  const globalI18n = i18n.global;
+
+  Object.keys(localMessages).forEach((locale) => {
+    if (!globalI18n.getLocaleMessage(locale)[sliceName]) {
+      globalI18n.mergeLocaleMessage(locale, { [sliceName]: localMessages[locale] });
+    }
+  });
+
+  return {
+    t: (key, ...args) => globalI18n.t(`${sliceName}.${key}`, ...args),
+  };
+}
