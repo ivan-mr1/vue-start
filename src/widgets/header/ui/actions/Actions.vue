@@ -14,9 +14,9 @@ import { ThemeToggle } from '@/features/theme-switcher';
 .header {
   &__actions {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     align-items: center;
-    gap: 1rem;
+    gap: 0.6rem;
   }
 
   // &__action {

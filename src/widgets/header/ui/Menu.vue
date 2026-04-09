@@ -127,7 +127,7 @@ const navigation = computed(() => [
     color: var(--menu-link);
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
     @media (max-width: em(767.98)) {
       height: 44px;
       font-size: rem(26);

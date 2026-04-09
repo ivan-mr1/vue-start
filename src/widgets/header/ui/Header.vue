@@ -29,13 +29,7 @@ const { isMenuOpen, isScrolled, isHidden, toggleMenu, closeMenu, onMenuLinkClick
   >
     <div class="header__container">
       <RouterLink :to="{ name: 'Home' }">
-        <Logo
-          class="header__logo"
-          image-url="/img/logo.svg"
-          :width="25"
-          :height="25"
-          text="MOVIES"
-        />
+        <Logo class="header__logo" image-url="/img/logo.svg" :width="25" :height="25" />
       </RouterLink>
 
       <div
@@ -90,7 +84,7 @@ const { isMenuOpen, isScrolled, isHidden, toggleMenu, closeMenu, onMenuLinkClick
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include adaptive-clamp('column-gap', 40, 20);
+    gap: 1rem;
     @include adaptive-clamp('min-height', 100, 65);
   }
 
