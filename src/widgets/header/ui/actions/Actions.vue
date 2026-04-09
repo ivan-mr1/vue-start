@@ -1,9 +1,11 @@
 <script setup>
 import { LangSelect } from '@/features/lang-switcher';
+import { ThemeToggle } from '@/features/theme-switcher';
 </script>
 
 <template>
   <div class="header__actions">
+    <ThemeToggle />
     <LangSelect />
   </div>
 </template>
