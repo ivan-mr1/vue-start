@@ -3,15 +3,12 @@ import axios from 'axios';
 const isDev = import.meta.env.DEV;
 
 export const apiClient = axios.create({
-  // Dev: прямой запрос к реальному API
-  // Prod: все запросы идут через /api → proxy
   baseURL: isDev ? '' : '/api',
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-// Логирование ошибок
 apiClient.interceptors.response.use(
   (response) => response,
   (error) => {
